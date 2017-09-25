@@ -29,11 +29,13 @@ class Stand extends Model {
             $this->company_id = NULL;
             try {
                 $this->save();
-            } catch (\Exception $e) {
+            } 
+            catch (\Exception $e) {
                 throw new standInsertionException();
             }
             return true;
-        } else
+        } 
+        else
             return false;
     }
 
@@ -47,7 +49,8 @@ class Stand extends Model {
                 $this->save();
                 return true;
             }
-        } catch (\Exception $e) {
+        } 
+        catch (\Exception $e) {
             throw new standUpdateException();
         }
     }
