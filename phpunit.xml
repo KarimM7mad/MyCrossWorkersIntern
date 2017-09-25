@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit backupGlobals="false"
+         backupStaticAttributes="false"
+         bootstrap="bootstrap/autoload.php"
+         colors="true"
+         convertErrorsToExceptions="true"
+         convertNoticesToExceptions="true"
+         convertWarningsToExceptions="true"
+         processIsolation="false"
+         stopOnFailure="false">
+    <testsuites>
+ 
+<!--                
+
+        <testsuite name="Feature">
+            <directory suffix="Test.php">./tests/Feature</directory>
+        </testsuite>
+
+        <testsuite name="Unit">
+            <directory suffix="Test.php">./tests/Unit</directory>
+        </testsuite>
+
+        <testsuite name="storeEventTest">
+            <directory>./tests/Unit/storeEventTest.php</directory>
+        </testsuite>
+         <testsuite name="updateEventTest">
+            <directory>./tests/Unit/updateEventTest.php</directory>
+        </testsuite>
+            <testsuite name="storeStandTest">
+            <directory>./tests/Unit/storeStandTest.php</directory>
+        </testsuite>
+        <testsuite name="updateStandTest">
+                    <directory>./tests/Unit/updateStandTest.php</directory>
+        </testsuite>
+        <testsuite name="updateStandTest">
+            <directory>./tests/Unit/updateStandTest.php</directory>
+        </testsuite>
+
+        <testsuite name="registerationTest">
+            <directory>./tests/Feature/registerationTest.php</directory>
+        </testsuite>
+-->
+
+        <testsuite name="loginTest">
+            <directory>./tests/Feature/loginTest.php</directory>
+        </testsuite>
+
+
+        
+    </testsuites>
+    
+    <filter>
+        <whitelist processUncoveredFilesFromWhitelist="true">
+            <directory suffix=".php">./app</directory>
+        </whitelist>
+    </filter>
+    <php>
+        <env name="APP_ENV" value="testing"/>
+        <env name="CACHE_DRIVER" value="array"/>
+        <env name="SESSION_DRIVER" value="array"/>
+        <env name="QUEUE_DRIVER" value="sync"/>
+        <env name="DB_CONNECTION" value="mysql_testing"/>
+    </php>
+</phpunit>
